@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { setToken } from '../state/slices/userSlice';
+import { loadCartSuccess } from '../state/slices/cartSlice';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../my.css';
@@ -20,6 +21,12 @@ const LoginPage: React.FC = () => {
     try {
       const response = await axios.post('https://localhost:7107/api/Auth/Login', { email, password });
       dispatch(setToken(response.data.token));
+      const cartResponse = await axios.get('https://localhost:7107/api/Cart/GetCart', {
+        headers: {
+          'Authorization': `Bearer ${response.data.token}`
+        }
+      });
+      dispatch(loadCartSuccess(cartResponse.data));
       navigate('/home');
     } catch (error) {
       console.error('Failed to login', error);

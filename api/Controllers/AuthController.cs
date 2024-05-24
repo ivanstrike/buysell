@@ -2,6 +2,7 @@
 using api.Models;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Collections;
 using System.ComponentModel.DataAnnotations;
@@ -61,12 +62,14 @@ public class AuthController : ControllerBase
             CartItems = new List<CartItem>()
         };
 
-        user.Cart = cart;
-
+        _context.Carts.Add(cart);
         _context.Users.Add(user);
+
+        user.Cart = cart;
         _context.SaveChanges();
 
-        return Ok();
+        var updatedUser = _context.Users.Include(u => u.Cart).FirstOrDefault(u => u.Id == user.Id);
+        return Ok(updatedUser);
     }
 
     [HttpPost("Login")]

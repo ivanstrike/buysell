@@ -59,23 +59,29 @@
   },
   {
     "ContainingType": "CartController",
+    "Method": "DeleteItem",
+    "RelativePath": "api/Cart/DeleteItem/{productId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CartController",
     "Method": "GetCart",
     "RelativePath": "api/Cart/GetCart",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "api.Models.Cart",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "CartController",
@@ -96,6 +102,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "CartController",
+    "Method": "UpdateQuantity",
+    "RelativePath": "api/Cart/UpdateQuantity",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "UpdateQuantityRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ProductController",

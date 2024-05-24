@@ -85,41 +85,112 @@ public class CartController : ControllerBase
             return StatusCode(500, "Internal server error.");
         }
     }
-    [HttpGet]
+    
     [Authorize]
-    public async Task<ActionResult<Cart>> GetCart()
+    [HttpGet]
+    public IActionResult GetCart()
     {
-        try
+        var userId = _userService.GetUserId(); 
+        if (userId == null)
         {
-            var userId = _userService.GetUserId();
-            _logger.LogInformation("UserId: {userId}", userId);
-
-            if (!Guid.TryParse(userId, out Guid userIdGuid))
-            {
-                _logger.LogError("Invalid UserId format: {userId}", userId);
-                return BadRequest("Invalid UserId format.");
-            }
-
-            var cart = await _context.Carts
-                .Include(c => c.CartItems)
-                .ThenInclude(ci => ci.Product)
-                .FirstOrDefaultAsync(c => c.UserId == userIdGuid);
-
-            if (cart == null)
-            {
-                return NotFound("Cart not found.");
-            }
-
-            return Ok(cart);
+            return Unauthorized();
         }
-        catch (Exception ex)
+
+        if (!Guid.TryParse(userId, out Guid userGuid))
         {
-            _logger.LogError(ex, "An error occurred while retrieving the cart.");
-            return StatusCode(500, "Internal server error.");
+            _logger.LogError("Invalid productId format: {productId}", userId);
+            return BadRequest("Invalid productId format.");
         }
+
+        var cart = _context.Carts
+            .Include(c => c.CartItems)
+            .ThenInclude(ci => ci.Product) 
+            .FirstOrDefault(c => c.UserId == userGuid);
+
+        if (cart == null)
+        {
+            return NotFound();
+        }
+
+        // Map the CartItems to the format expected by the client
+        var cartItems = cart.CartItems.Select(ci => new
+        {
+            productId = ci.ProductId,
+            quantity = ci.Quantity
+        }).ToList();
+
+        return Ok(cartItems);
+    }
+    [HttpPut]
+    [Authorize]
+    public async Task<IActionResult> UpdateQuantity([FromBody] UpdateQuantityRequest model)
+    {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+        var userId = _userService.GetUserId();
+        if (!Guid.TryParse(userId, out Guid userGuid))
+        {
+            _logger.LogError("Invalid productId format: {productId}", userId);
+            return BadRequest("Invalid productId format.");
+        }
+        Cart cart = await _context.Carts.FirstOrDefaultAsync(c => c.UserId == userGuid);
+        var productId = model.ProductId;
+        if (!Guid.TryParse(productId, out Guid producGuid))
+        {
+            _logger.LogError("Invalid productId format: {productId}", productId);
+            return BadRequest("Invalid productId format.");
+        }
+
+        var cartItem = await _context.CartItems.FirstOrDefaultAsync(ci => ci.ProductId == producGuid && ci.CartId == cart.Id);
+        if (cartItem == null)
+        {
+            return NotFound();
+        }
+
+        cartItem.Quantity = model.Quantity;
+
+        await _context.SaveChangesAsync();
+
+        return Ok();
+    }
+
+    [HttpDelete("{productId}")]
+    [Authorize]
+    public async Task<IActionResult> DeleteItem(string productId)
+    {
+        var userId = _userService.GetUserId();
+        if (!Guid.TryParse(userId, out Guid userGuid))
+        {
+            _logger.LogError("Invalid productId format: {productId}", userId);
+            return BadRequest("Invalid productId format.");
+        }
+        if (!Guid.TryParse(productId, out Guid producGuid))
+        {
+            _logger.LogError("Invalid productId format: {productId}", userId);
+            return BadRequest("Invalid productId format.");
+        }
+        Cart cart = await _context.Carts.FirstOrDefaultAsync(c => c.UserId == userGuid);
+        var cartItem = await _context.CartItems
+            .FirstOrDefaultAsync(c => c.ProductId == producGuid && c.CartId == cart.Id);
+
+        if (cartItem == null)
+        {
+            return NotFound();
+        }
+
+        _context.CartItems.Remove(cartItem);
+        await _context.SaveChangesAsync();
+
+        return Ok();
     }
 }
-
+public class UpdateQuantityRequest
+{
+    public string ProductId { get; set; }
+    public int Quantity { get; set; }
+}
 public interface IUserService
 {
     string GetUserId();
