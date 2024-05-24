@@ -86,7 +86,6 @@ public class ProductController : ControllerBase
 
     // DELETE: api/Product/5
     [HttpDelete("{id}")]
-    [Authorize]
     public async Task<IActionResult> DeleteProduct(Guid id)
     {
         var product = await _context.Products.FindAsync(id);

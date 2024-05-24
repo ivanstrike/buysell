@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\ria-2\\OOP\\buysell\\api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|c:\\users\\ria-2\\oop\\buysell\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|c:\\users\\ria-2\\oop\\buysell\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|c:\\users\\ria-2\\oop\\buysell\\api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|c:\\users\\ria-2\\oop\\buysell\\api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|c:\\users\\ria-2\\oop\\buysell\\api\\controllers\\carticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|solutionrelative:controllers\\carticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,32 +31,8 @@
       "RelativeMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|solutionrelative:models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|c:\\users\\ria-2\\oop\\buysell\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|c:\\users\\ria-2\\oop\\buysell\\api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|c:\\users\\ria-2\\oop\\buysell\\api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ria-2\\OOP\\buysell\\api\\Migrations\\20240523215818_ch5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240523215818_ch5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|c:\\users\\ria-2\\oop\\buysell\\api\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|c:\\users\\ria-2\\oop\\buysell\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ria-2\\OOP\\buysell\\api\\Migrations\\20240523180411_ch3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240523180411_ch3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|c:\\users\\ria-2\\oop\\buysell\\api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -65,6 +57,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|c:\\users\\ria-2\\oop\\buysell\\api\\migrations\\20240523085433_ch1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|solutionrelative:migrations\\20240523085433_ch1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|c:\\users\\ria-2\\oop\\buysell\\api\\migrations\\20240523215818_ch5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|solutionrelative:migrations\\20240523215818_ch5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|c:\\users\\ria-2\\oop\\buysell\\api\\migrations\\20240523180411_ch3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4AB9EBE-5A6D-4813-AB5E-322841CED2BD}|api.csproj|solutionrelative:migrations\\20240523180411_ch3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 245,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,20 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20240523215818_ch5.cs",
-              "DocumentMoniker": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Migrations\\20240523215818_ch5.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240523215818_ch5.cs",
-              "ToolTip": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Migrations\\20240523215818_ch5.cs",
-              "RelativeToolTip": "Migrations\\20240523215818_ch5.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T21:58:18.996Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "20240523180411_ch3.cs",
               "DocumentMoniker": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Migrations\\20240523180411_ch3.cs",
               "RelativeDocumentMoniker": "Migrations\\20240523180411_ch3.cs",
@@ -103,64 +90,63 @@
               "RelativeToolTip": "Migrations\\20240523180411_ch3.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T18:04:11.479Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-23T18:04:11.479Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "CartIController.cs",
               "DocumentMoniker": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Controllers\\CartIController.cs",
               "RelativeDocumentMoniker": "Controllers\\CartIController.cs",
               "ToolTip": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Controllers\\CartIController.cs",
               "RelativeToolTip": "Controllers\\CartIController.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAYwEUAAAAVAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAgwB4AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-23T16:58:43.443Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
               "ToolTip": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Controllers\\ProductController.cs",
               "RelativeToolTip": "Controllers\\ProductController.cs",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAkwBoAAAAFAAAA",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAowFgAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-23T08:45:10.704Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAzwCsAAAAmAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAADAAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-22T23:01:44.968Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABoAAAA1AAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-22T22:43:03.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Cart.cs",
               "DocumentMoniker": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Models\\Cart.cs",
               "RelativeDocumentMoniker": "Models\\Cart.cs",
@@ -173,20 +159,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
               "ToolTip": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Models\\User.cs",
               "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-22T22:18:22.256Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "CartItem.cs",
               "DocumentMoniker": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Models\\CartItem.cs",
               "RelativeDocumentMoniker": "Models\\CartItem.cs",
@@ -199,13 +185,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAEAAAA",
+              "ViewState": "AQIAADIAAAAAAAAAAAAgwCYAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-23T07:37:58.834Z",
               "EditorCaption": ""
@@ -225,7 +211,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
+              "Title": "20240523215818_ch5.cs",
+              "DocumentMoniker": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Migrations\\20240523215818_ch5.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240523215818_ch5.cs",
+              "ToolTip": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Migrations\\20240523215818_ch5.cs",
+              "RelativeToolTip": "Migrations\\20240523215818_ch5.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T21:58:18.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "20240523103439_ch2.cs",
               "DocumentMoniker": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Migrations\\20240523103439_ch2.cs",
               "RelativeDocumentMoniker": "Migrations\\20240523103439_ch2.cs",
@@ -233,12 +231,11 @@
               "RelativeToolTip": "Migrations\\20240523103439_ch2.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAzwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T10:34:39.987Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-23T10:34:39.987Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ria-2\\OOP\\buysell\\api\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -250,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 13,
               "Title": "20240523085433_ch1.cs",
               "DocumentMoniker": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Migrations\\20240523085433_ch1.cs",
               "RelativeDocumentMoniker": "Migrations\\20240523085433_ch1.cs",
@@ -262,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 11,
               "Title": "BuysellDbContext.cs",
               "DocumentMoniker": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Data\\BuysellDbContext.cs",
               "RelativeDocumentMoniker": "Data\\BuysellDbContext.cs",
@@ -274,7 +271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 12,
               "Title": "20240522224222_init.cs",
               "DocumentMoniker": "C:\\Users\\ria-2\\OOP\\buysell\\api\\Migrations\\20240522224222_init.cs",
               "RelativeDocumentMoniker": "Migrations\\20240522224222_init.cs",

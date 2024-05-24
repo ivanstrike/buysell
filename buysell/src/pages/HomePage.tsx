@@ -1,18 +1,16 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-//import axios from 'axios';
 import { setProducts } from '../state/slices/productSlice';
 import { addItem } from '../state/slices/cartSlice';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { RootState } from '../state/store';
-import { useNavigate } from 'react-router-dom';
 import { clearToken } from '../state/slices/userSlice';
 import useAxios from '../utils/axios';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
 const HomePage: React.FC = () => {
   const dispatch = useDispatch();
-  const cartItems = useSelector((state: RootState) => state.cart.items);
   const products = useSelector((state: RootState) => state.products.products);
   const token = useSelector((state: RootState) => state.user.token);
   const navigate = useNavigate();
@@ -29,28 +27,25 @@ const HomePage: React.FC = () => {
     };
 
     fetchProducts();
-  }, [dispatch, token]);
+  }, [dispatch, token, instance]);
 
   const handleAddToCart = async (productId: string) => {
     try {
-      // Находим товар в корзине по его идентификатору
       dispatch(addItem({ productId, quantity: 1 }));
-      //console.log(productId);
-      //console.log(token);
-      // Вызываем метод AddToCart() контроллера, чтобы обновить корзину в базе данных
+
       const response = await axios.post(
         `https://localhost:7107/api/Cart/AddToCart?productId=${productId}`, 
-        {},  // пустое тело запроса
+        {},  
         {
             headers: {
-                Authorization: `Bearer ${token}` // Указываем токен в заголовке
+                Authorization: `Bearer ${token}` 
             }
         }
     );
       if (response.status === 200) {
         console.log('Cart updated in database');
       }
-    } catch (error : any) {
+    } catch (error: any) {
       console.error(error.response.data);
     }
   };
@@ -61,50 +56,49 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <div className="container">
-      <div className="row mb-3">
-        <div className="col">
-        <button type="button" className="btn btn-link mt-3" onClick={handleLogout}>
+    <div className="container mt-4">
+      <div className="d-flex justify-content-between align-items-center mb-4">
+        <button type="button" className="btn btn-link" onClick={handleLogout}>
           Выйти из аккаунта
         </button>
-          <h2>Products</h2>
-        </div>
-        <div className="col-auto">
-        <button type="button" className="btn btn-link mt-3" onClick={() => navigate('/addproduct')}>
-          Добавить товар
+        <h2 style={{ fontWeight: 'bold' }}>Товары</h2>
+        <div className="d-flex">
+        <button type="button" className="btn me-2" style={{ backgroundColor: '#043D92', color: 'white' }} onClick={() => navigate('/addproduct')}>
+          Добавить свой товар
         </button>
-        </div>
-        <div className="col-auto">
+
           <Link to="/cart" className="btn btn-secondary">
-            Cart
+            Корзина
           </Link>
         </div>
       </div>
-      {products.length > 0 ? (
-        <div className="row">
-          {products.map(product => (
-            <div key={product.id} className="col-md-4 mb-3">
-              <div className="card">
-                <div className="card-body">
+      <div className="row">
+        {products.length > 0 ? (
+          products.map(product => (
+            <div key={product.id} className="col-md-4 mb-4">
+              <div className="card h-100">
+                <div className="card-body d-flex flex-column">
                   <h5 className="card-title">{product.name}</h5>
                   <p className="card-text">{product.description}</p>
                   <p className="card-text">${product.price}</p>
                   <button
-                    className="btn btn-primary"
+                    className="btn btn-primary mt-auto"
                     onClick={() => handleAddToCart(product.id)}
                   >
-                    Add to Cart
+                    Добавить в корзину
                   </button>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-      ) : (
-        <div className="alert bg-light">
-          <p>No products available.</p>
-        </div>
-      )}
+          ))
+        ) : (
+          <div className="col">
+            <div className="alert alert-light">
+              <p>No products available.</p>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

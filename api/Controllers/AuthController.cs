@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.Collections;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -17,16 +18,19 @@ public class AuthController : ControllerBase
 {
     private readonly BuysellDbContext _context;
     private readonly IConfiguration _configuration;
-
-    public AuthController(BuysellDbContext context, IConfiguration configuration)
+    private readonly ILogger<CartController> _logger;
+    public AuthController(BuysellDbContext context, IConfiguration configuration, ILogger<CartController> logger)
     {
         _context = context;
         _configuration = configuration;
+        _logger = logger;
     }
 
     [HttpPost("Register")]
     public IActionResult Register(RegisterRequest model)
     {
+        _logger.LogInformation($"{model}");
+        Debug.WriteLine($"Register request: {model}");
         if (_context.Users.Any(u => u.Email == model.Email))
         {
             return BadRequest("Username or email already exists");
@@ -34,17 +38,30 @@ public class AuthController : ControllerBase
 
         if(model.Password == null || model.Password =="" || model.Username == null || model.Username == "" || model.Email == null || model.Email == "" || !model.Email.Contains("@"))  
         {
+            Debug.WriteLine("Bad data: password, username or email is null or empty or email does not contain @");
             return BadRequest("Bad data");
+        }
+        if (model.Password.Length < 8)
+        {
+            return BadRequest("Password must be at least 8 characters long and contain at least one special character");
         }
 
         var user = new User
         {
             Id = Guid.NewGuid(),
             Username = model.Username,
-            Password = model.Password,
             Email = model.Email,
-            Cart = null
+            Password = model.Password
         };
+
+        var cart = new Cart
+        {
+            Id = Guid.NewGuid(),
+            UserId = user.Id,
+            CartItems = new List<CartItem>()
+        };
+
+        user.Cart = cart;
 
         _context.Users.Add(user);
         _context.SaveChanges();

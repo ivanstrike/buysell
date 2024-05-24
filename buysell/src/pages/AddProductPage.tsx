@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { RootState } from '../state/store';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
 const AddProductPage: React.FC = () => {
   const [name, setName] = useState('');
@@ -15,7 +16,7 @@ const AddProductPage: React.FC = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post('https://localhost:7107/api/Product', {
+      await axios.post('https://localhost:7107/api/Product', {
         name,
         description,
         price,
@@ -31,43 +32,48 @@ const AddProductPage: React.FC = () => {
   };
 
   return (
-    <div className="container">
-      <button type="button" className="btn btn-link mt-3" onClick={() => navigate('/home')}>
-          Вернуться к товарам
+    <div className="container d-flex flex-column align-items-center mt-5">
+      <div className="card p-4" style={{ width: '100%', maxWidth: '500px' }}>
+        <h2 className="card-title text-center mb-4">Создание товара</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label htmlFor="name" className="form-label">Название</label>
+            <input
+              type="text"
+              className="form-control"
+              id="name"
+              placeholder="Введите название"
+              value={name}
+              onChange={e => setName(e.target.value)}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="description" className="form-label">Описание</label>
+            <textarea
+              className="form-control"
+              id="description"
+              placeholder="Введите описание товара"
+              value={description}
+              onChange={e => setDescription(e.target.value)}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="price" className="form-label">Цена($)</label>
+            <input
+              type="text"
+              className="form-control"
+              id="price"
+              placeholder="Введите цену"
+              value={price}
+              onChange={e => setPrice(e.target.value)}
+            />
+          </div>
+          <button type="submit" className="btn btn-primary w-100">Создать товар</button>
+        </form>
+        <button type="button" className="btn btn-link mt-3" onClick={() => navigate('/home')}>
+          Назад
         </button>
-      <h2>Add Product</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="name" className="form-label">Name</label>
-          <input
-            type="text"
-            className="form-control"
-            id="name"
-            value={name}
-            onChange={e => setName(e.target.value)}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="description" className="form-label">Description</label>
-          <textarea
-            className="form-control"
-            id="description"
-            value={description}
-            onChange={e => setDescription(e.target.value)}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="price" className="form-label">Price</label>
-          <input
-            type="text"
-            className="form-control"
-            id="price"
-            value={price}
-            onChange={e => setPrice(e.target.value)}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">Add Product</button>
-      </form>
+      </div>
     </div>
   );
 };
